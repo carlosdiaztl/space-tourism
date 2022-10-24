@@ -1,54 +1,92 @@
-import React, { useEffect } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
-import Navbar from './Navbar'
-import  { useState } from "react";
+import React, { useEffect } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logonav from "../../assets/shared/logo.svg";
-
-
+import fondo1 from "../../assets/home/background-home-desktop.jpg";
+import fondo2 from "../../assets/destination/background-destination-desktop.jpg";
+import fondo3 from "../../assets/crew/background-crew-desktop.jpg";
+import fondo4 from "../../assets/technology/background-technology-desktop.jpg";
+import "../home/style.scss";
 
 const Home = () => {
-  const l= 'background-image: url(https://blog.avivamiento.com/content/images/2019/09/cielos.jpg)'
-  const initialFondo='blue'
-  const [fondo, setfondo] = useState(initialFondo)
-  const navigate = useNavigate()
-  useEffect(() => {
-
-
-  }, [])
-  
-  const changeFondo =(fond)=>{
-    console.log('hi');
-    if (fond=='fondo1') {
-      console.log(initialFondo);
-      setfondo('red')
-      console.log('si');
-      console.log(fondo);
-      
+  let initial = fondo1;
+  const [fondo, setfondo] = useState(initial);
+  const navigate = useNavigate();
+  const changef = (po) => {
+    if (po === "0") {
+      console.log("0");
+      setfondo(fondo1);
+      navigate("home");
     }
-  }
+    if (po === "1") {
+      console.log("1");
+      setfondo(fondo2);
+      navigate("destination");
+    }
+    if (po === "2") {
+      console.log("2");
+      setfondo(fondo3);
+      navigate("crew");
+    }
+    if (po === "3") {
+      console.log("2");
+      setfondo(fondo4);
+      navigate("technology");
+    }
+  };
   return (
-    <>
-    <div className='body' style={{backgroundColor:initialFondo}}> 
-    <nav className="nav">
-      <figure>
-        {" "}
-        <img src={logonav} />{" "}
-      </figure>
-      <section>
-        <ul>
-          <li>
-            <button onClick={()=>{changeFondo('fondo1')}} to={'crew'}>Home
+    <body className="body" style={{ backgroundImage: `url(${fondo})` }}>
+      <nav className="navbar">
+        <figure>
+          {" "}
+          <img src={logonav} />{" "}
+        </figure>
+        <hr />
+        <section>
+          <ul>
+            <li>
+              <button
+                onClick={() => {
+                  changef("0");
+                }}
+              >
+                00 Home{" "}
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  changef("1");
+                }}
+              >
+                01 Destination{" "}
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  changef("2");
+                }}
+              >
+                02 Crew
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  changef("3");
+                }}
+              >
+                03 Technology{" "}
+              </button>
+            </li>
+          </ul>
+        </section>
+      </nav>
+      <Outlet />
+    </body>
+  );
+};
 
-            </button>
-          </li>
-        </ul>
-      </section>
-    </nav>
-   <Outlet/>
-    </div>
-    </>
-  )
-}
-
-export default Home
+export default Home;

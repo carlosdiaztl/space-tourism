@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import  { useState } from "react";
@@ -12,6 +12,11 @@ const Home = () => {
   const initialFondo='blue'
   const [fondo, setfondo] = useState(initialFondo)
   const navigate = useNavigate()
+  useEffect(() => {
+
+
+  }, [])
+  
   const changeFondo =(fond)=>{
     console.log('hi');
     if (fond=='fondo1') {
@@ -33,9 +38,9 @@ const Home = () => {
       <section>
         <ul>
           <li>
-            <NavLink onClick={()=>{changeFondo('fondo1')}} to={'crew'}>Home
+            <button onClick={()=>{changeFondo('fondo1')}} to={'crew'}>Home
 
-            </NavLink>
+            </button>
           </li>
         </ul>
       </section>

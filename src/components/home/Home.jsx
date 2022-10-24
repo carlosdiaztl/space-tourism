@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react'
-import { useOutletContext } from 'react-router-dom'
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Navbar from './Navbar'
+
 
 const Home = () => {
   return (
-    <div>
-    Galaxya
-    </div>
+    <>
+  
+    <Navbar/>
+    <Outlet/>
+    </>
   )
 }
 

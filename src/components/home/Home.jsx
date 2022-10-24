@@ -3,7 +3,8 @@ import { useOutletContext } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div>vuelos
+    <div>
+    Galaxya
     </div>
   )
 }

@@ -4,18 +4,17 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import Login from "../components/mainvuelos/Login";
 import Home from "../components/home/Home";
+import Notfound from "../noSearch/Notfound";
 
 
 const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login />} />
-                    <Route path='vuelos' element={<Home/>}>
-                    </Route>
-                <Route path="*" />
+                <Route path="/" element={<Home />} />
+                    
+                <Route path="*" element={<Notfound/>}  />
             </Routes>
         </BrowserRouter>
     )

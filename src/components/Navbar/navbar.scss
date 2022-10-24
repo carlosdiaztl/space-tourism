@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+  align-items: center;
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+  section {
+    background-color: coral;
+    backdrop-filter: blur(40.7742px);
+    width: 50%;
+  }
+}

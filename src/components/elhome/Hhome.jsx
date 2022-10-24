@@ -1,5 +1,5 @@
 import React from 'react'
-import fondo from '../../imgs/home/background-home-desktop.jpg'
+
 import '../elhome/style.css'
 const Hhome = () => {
   

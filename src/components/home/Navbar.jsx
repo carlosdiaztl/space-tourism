@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logonav from "../../imgs/shared/logo.svg";
+import logonav from "../../assets/shared/logo.svg";
 import Home from "./Home";
 
 const Navbar = () => {
+  const [first, setfirst] = useState()
+
   return (
    
     <nav className="nav">

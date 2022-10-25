@@ -1,8 +1,11 @@
 import React from 'react'
+import '../noSearch/style.scss'
 
 const Notfound = () => {
   return (
-    <div>Page Notfound</div>
+    <div className='notfound'><h1 style={{color:'white'}}>  PAGE NOT FOUND TRY ANOTHER</h1>
+    <h2> Continue explore our world.</h2>
+    </div>
   )
 }
 

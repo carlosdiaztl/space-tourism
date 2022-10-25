@@ -1,15 +1,48 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./destination.scss";
+import DestinyOne from "./destinationItems/DestinyOne";
+import DestinyTwo from "./destinationItems/DestinyTwo";
+import DestinyThree from "./destinationItems/DestinyThree";
+import DestinyFour from "./destinationItems/DestinyFour";
+import { useState } from "react";
+import logoMoon from '../assets/destination/image-moon.webp';
+import logoMars from '../assets/destination/image-mars.webp';
+import Europa from '../assets/destination/image-europa.webp';
+import Titan from '../assets/destination/image-titan.webp';
+
 
 const Destination = () => {
+  const firstPlanet = <DestinyOne/>
+  const [planets , setPlanets] = useState(firstPlanet);
   
+const firstImagePlante = logoMoon;
+  const [imagePlanet, setImagePlanet] = useState(firstImagePlante)
+
+  const changesPlanets = (p) =>{
+    if(p==='moon'){
+      setPlanets(<DestinyOne/>)
+      setImagePlanet(logoMoon)
+    }
+    if(p==='mars'){
+      setPlanets(<DestinyTwo/>)
+      setImagePlanet(logoMars)
+    }
+    if(p==='europa'){
+      setPlanets(<DestinyThree/>)
+      setImagePlanet(Europa)
+    }
+    if(p==='titan'){
+      setPlanets(<DestinyFour/>)
+      setImagePlanet(Titan)
+    }
+  }
   return (
     <main className="destination">
       
       <div className="destination__second">
-        <h1 className="destination__h1">PICK YOUR DESTINATION</h1>
-        <figure>{/* <img src="" alt="" /> */}</figure>
+        <h1 className="destination__h1"><span>01 </span>PICK YOUR DESTINATION</h1>
+        <figure><img src={imagePlanet} alt="Logo Moon" /></figure>
       </div>
 
       <article className="destination__third">
@@ -17,29 +50,14 @@ const Destination = () => {
 
           <div className="destination__list">
             <ul className="destination__ul">
-              <li><button className="destination__nav"> MOON</button></li>
-              <li><button> MARS</button></li>
-              <li><button> EUROPA</button></li>
-              <li><button> TITAN</button></li>
+              <li><button className="destination__nav" onClick={()=>{changesPlanets('moon')}}> MOON</button></li>
+              <li><button className="destination__nav" onClick={()=>{changesPlanets('mars')}}> MARS</button></li>
+              <li><button className="destination__nav" onClick={()=>{changesPlanets('europa')}}> EUROPA</button></li>
+              <li><button className="destination__nav" onClick={()=>{changesPlanets('titan')}}> TITAN</button></li>
             </ul>
           </div>
 
-          <h2 className="destination__h2">MOON</h2>
-          <p className="destination__parrafo">
-            See our planet as you’ve never seen it before. A perfect relaxing
-            trip away to help regain perspective and come back refreshed. While
-            you’re there, take in some history by visiting the Luna 2 and Apollo
-            11 landing sites.
-          </p>
-
-          <div className="destination__final">
-            <h3 className="destination__h3">AVG.DISTANCE</h3>
-            <h3 className="destination__h3">EST.TRAVEL TIME</h3>
-          </div>
-          <div className="destination__numbers">
-            <p className="destination__p">3 DAYS</p>
-            <p className="destination__p">384.400 KM</p>
-          </div>
+          {planets}
         </div>
       </article>
     </main>

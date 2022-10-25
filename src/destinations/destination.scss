@@ -16,6 +16,7 @@ $color-text: #D0D6F9;
 .destination{
     display: flex;
     height: 80vh;
+    width:100%;
 
     &__h1{
         color: $color-tittle;
@@ -24,6 +25,7 @@ $color-text: #D0D6F9;
     &__second{
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
         width: 100%;
     }
@@ -44,7 +46,7 @@ $color-text: #D0D6F9;
     }
     &__parrafo{
         color: $color-text;
-        font-size: size(1);
+        font-size: 20px;
     }
     &__final{
         display: flex;
@@ -69,14 +71,31 @@ $color-text: #D0D6F9;
         color: $color-tittle;
     }
     &__list{
-        display: flex;  
-        justify-content: center;
+        display: flex;
     }
     &__ul{
         list-style: none;
         display: flex;
-        justify-content: center;
         gap: 1vw;
+        align-items: flex-start;
+        justify-content: start;
+    }
+    &__nav{
+        background-color: transparent;
+        border: none;
+        font-size: size(1);
+        color: $color-text;
+        &:hover{
+            color: $color-tittle;
+            
+        }
     }
 
+}
+
+@media screen and (min-width:400%) {
+    body{
+        width:100%;
+        background-color: aqua;
+    }
 }

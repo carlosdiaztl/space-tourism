@@ -39,7 +39,6 @@ const Home = () => {
     <body className="body" style={{ backgroundImage: `url(${fondo})` }}>
       <nav className="navbar">
         <figure>
-          {" "}
           <img src={logonav} />{" "}
         </figure>
         <hr />

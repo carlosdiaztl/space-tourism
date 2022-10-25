@@ -20,16 +20,20 @@ body{
     }
     section{
         backdrop-filter: blur(20px);
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
         ul{
             display: flex;
-            gap: 20px
-            ;
+            gap: 3vw;
             li{
                 list-style: none;
                 button{
                     color: white;
                     background-color: transparent;
                     border: none;
+                    font-size: 17px;
                 }
             }
         }

@@ -1,0 +1,101 @@
+@import 'https://fonts.googleapis.com/css2?family=Bellefair&family=Epilogue:ital,wght@0,400;1,500&family=Karla:wght@400;700&display=swap';
+
+$font-family: 'Bellefair';
+$font-size: 16px;
+$color-tittle: #FFFFFF;
+$color-text: #D0D6F9;
+
+@function size ($sz){
+    @return $sz * $font-size;
+}
+
+*{
+    font-family: $font-family;
+}
+
+.destination{
+    display: flex;
+    height: 80vh;
+    width:100%;
+
+    &__h1{
+        color: $color-tittle;
+        font-weight: normal;
+    }
+    &__second{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__third{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__fourth{
+        width: 50%;
+    }
+    &__h2{
+        font-size: size(5);
+        font-weight: normal;
+        color: $color-tittle;
+    }
+    &__parrafo{
+        color: $color-text;
+        font-size: 20px;
+    }
+    &__final{
+        display: flex;
+        gap: 3vw;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+    }
+    &__numbers{
+        display: flex;
+        gap: 3vw;
+        align-items: flex-start;
+        justify-content: start;
+        width: 100%;
+    }
+    &__h3{
+        color: $color-text;
+        font-weight: normal;
+        font-size: size(1);
+    }
+    &__p{
+        color: $color-tittle;
+    }
+    &__list{
+        display: flex;
+    }
+    &__ul{
+        list-style: none;
+        display: flex;
+        gap: 1vw;
+        align-items: flex-start;
+        justify-content: start;
+    }
+    &__nav{
+        background-color: transparent;
+        border: none;
+        font-size: size(1);
+        color: $color-text;
+        &:hover{
+            color: $color-tittle;
+            
+        }
+    }
+
+}
+
+@media screen and (min-width:400%) {
+    body{
+        width:100%;
+        background-color: aqua;
+    }
+}

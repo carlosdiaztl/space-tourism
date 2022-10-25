@@ -39,6 +39,7 @@ const firstImagePlante = logoMoon;
   }
   return (
     <main className="destination">
+    <div> test git</div>
       
       <div className="destination__second">
         <h1 className="destination__h1"><span>01 </span>PICK YOUR DESTINATION</h1>

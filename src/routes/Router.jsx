@@ -7,18 +7,17 @@ import Notfound from "../noSearch/Notfound";
 import Technology from "../technology/Technology";
 import Hhome from "../../src/components/elhome/Hhome";
 
-
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}>
-        <Route path="home" element={<Hhome/>} />
+          <Route path="home" element={<Hhome />} />
           <Route path="destination" element={<Destination />} />
           <Route path="crew" element={<Crew />} />
-          <Route path="technology" element={<Technology/>} />
-        <Route path="*" element={<Notfound />} />
+          <Route path="technology" element={<Technology />} />
         </Route>
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </BrowserRouter>
   );

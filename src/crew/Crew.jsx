@@ -76,7 +76,7 @@ const Crew = () => {
 
   return (
     <>
-      <main className="crew">
+      <div className="crew">
         <div className="crew__second">
           <figure>
             <img src={img} alt="" />
@@ -135,7 +135,7 @@ const Crew = () => {
             </div>
           </div>
         </article>
-      </main>
+      </div>
     </>
   );
 };

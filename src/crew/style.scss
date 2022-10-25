@@ -15,7 +15,7 @@ $color-text: #d0d6f9;
 
 .crew {
   display: flex;
-  height: 80vh;
+  height: 70vh;
   flex-direction: row-reverse;
   &__h1 {
     display: flex;
@@ -31,7 +31,8 @@ $color-text: #d0d6f9;
     flex-direction: column;
     width: 100%;
     img {
-      margin-top: 133px;
+        width: 80%;
+      margin-top: 20%;
     }
   }
 
